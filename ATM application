@@ -1,1 +1,36 @@
-
+ #include<stdio.h>
+ void main()
+ {
+     int B,bi,cw,cd,c,ra,b;
+     printf("\n Enter current account balance :");
+     scanf("%d",&B);
+     printf("\n Enter your choice:");
+     scanf("%d",&c);
+     if(c==1)
+     {
+         printf("\n Current Balance:%d",B);
+     }
+     else if(c==2)
+     {
+         printf("\n Enter the withdrawel amount:");
+         scanf("%d",&cw);
+         if(cw<=B)
+         {
+         printf("\n Transition successful");
+         ra=B-cw;
+         printf("\n Remaining Balance is %d",ra);
+         }
+         else
+         printf("\n Insufficient Balance");
+     }
+     else if(c==3)
+     {
+         printf("\n Enter the Deposit Amount :");
+         scanf("%d",&cd);
+         b=B+cd;
+         printf("\n Deposit Successful");
+         printf("\n Updated Balance %d",b);
+     }
+     else
+     printf("\n Invalid option");
+ }
